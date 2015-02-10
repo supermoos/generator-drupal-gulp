@@ -1,0 +1,45 @@
+{
+  "name": "generator-drupal-gulp",
+  "version": "0.0.0",
+  "description": "Drupal 7 Gulp Starter Theme for use as a starting template for building custom themes. Uses SCSS/SASS (with libsass compiler), HTML5 Boilerplate 5 with Modernizr and Normalize.css, and Gulp for all tasks.",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "lasseyls/generator-drupal-gulp",
+  "author": {
+    "name": "Lasse Moos",
+    "email": "lasse@yourlocalstudio.dk",
+    "url": "https://github.com/lasseyls"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "Drupal",
+    "gulp",
+    "theme",
+    "frontend",
+    "boilerplate",
+    "h5bp",
+    'libsass'
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.18.0",
+    "chalk": "^0.5.0",
+    "lodash": "~1.3.1",
+    "underscore.string": "~2.3.3",
+    "yosay": "^0.3.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  }
+}
