@@ -29,7 +29,7 @@ To install generator-drupal-gulp from npm, run:
 npm install -g generator-drupal-gulp
 ```
 
-Finally, initiate the generator:
+Finally, initiate the generator inside your `drupal/sites/all/themes/your_theme_name` directory:
 
 ```bash
 yo drupal-gulp
