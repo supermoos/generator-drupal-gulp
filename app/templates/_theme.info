@@ -13,7 +13,6 @@ stylesheets[all][0] = build/css/style.css
 ; Scripts
 ; ========================================
 
-scripts[0] = build/scripts/vendor/modernizr-2.8.3.min.js
 scripts[1] = build/scripts/main.js
 
 ; ========================================

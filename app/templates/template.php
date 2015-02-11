@@ -1,5 +1,10 @@
 <?php
 
+function <%= themeMachineName %>_preprocess_page(&$variables) {
+  drupal_add_js(drupal_get_path('theme', '<%= themeMachineName %>') .'/build/scripts/vendor/modernizr-2.8.3.min.js', array("group" => JS_LIBRARY, "weight" => 115));
+}
+
+
 /**
  * Implements hook_css_alter().
  * Forces style.css to be included with <link> tag instead of drupals default @import
