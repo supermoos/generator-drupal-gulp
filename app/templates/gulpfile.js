@@ -43,7 +43,8 @@ gulp.task('styles', function () {
             outputStyle: 'nested', // libsass doesn't support expanded yet
             precision: 10,
             includePaths: ['.'],
-            onError: function (err) { notify().write(err); console.error.bind(console, 'Sass error:'+err);}
+            errLogToConsole: true
+            //onError: function (err) {console.error.bind(console, 'Sass error:'+err);}
         }))
         .pipe($.postcss([
             require('autoprefixer-core')({browsers: ['last 2 version']})
