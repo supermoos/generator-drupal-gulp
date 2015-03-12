@@ -1,6 +1,6 @@
 {
   "name": "generator-drupal-gulp",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Drupal 7 Gulp Starter Theme for use as a starting template for building custom themes. Uses SCSS/SASS (with libsass compiler), HTML5 Boilerplate 5 with Modernizr and Normalize.css, and Gulp for all tasks.",
   "license": "MIT",
   "main": "app/index.js",
