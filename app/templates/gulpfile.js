@@ -90,6 +90,15 @@ gulp.task('extras', function () {
     }).pipe(gulp.dest('build'));
 });
 
+gulp.task('compress', function () {
+    gulp.src('build/scripts/**/*.js')
+        .pipe($.uglify())
+        .pipe(gulp.dest('build/scripts'));
+    gulp.src('build/css/**/*.css')
+        .pipe($.csso())
+        .pipe(gulp.dest('build/css'));
+});
+
 gulp.task('bs-reload', function (){
     browserSync.reload();
 });
@@ -110,6 +119,11 @@ gulp.task('browser-sync', function(){
     });
 });
 
+// Run drush to clear the theme registry.
+gulp.task('drush', $.shell.task([
+    'drush cache-clear theme-registry'
+]));
+
 gulp.task('watch',  ['images', 'fonts', 'styles', 'scripts', 'extras', 'browser-sync'],function () {
 
     gulp.watch('src/scripts/ts/**/*.ts', ['scripts']);
@@ -117,6 +131,8 @@ gulp.task('watch',  ['images', 'fonts', 'styles', 'scripts', 'extras', 'browser-
     gulp.watch('images/**/*', ['images']);
     gulp.watch('src/scripts/vendor/**/*', ['extras']);
     gulp.watch('src/fonts/*', ['fonts']);
+    gulp.watch('wsd.info', ['drush']);
+    gulp.watch('templates/*.tpl.php', ['drush']);
 });
 
 gulp.task('clearimages', function (done) {
@@ -128,6 +144,7 @@ gulp.task('cleanFonts', require('del').bind(null, ['build/fonts']));
 gulp.task('clean', require('del').bind(null, ['.tmp', 'build']));
 
 gulp.task('build', ['images', 'fonts', 'styles', 'scripts', 'extras'], function () {
+    gulp.start('compress');
     return gulp.src('build/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

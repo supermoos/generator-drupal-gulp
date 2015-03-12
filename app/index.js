@@ -73,7 +73,7 @@ module.exports = yeoman.generators.Base.extend({
         app: function () {
             this.packageInfo = {
                 "name": this.themeMachineName,
-                "version": "0.0.0"
+                "version": "1.1.0"
             };
             this.template('_package.json', 'package.json');
             this.fs.copy(

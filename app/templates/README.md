@@ -1,6 +1,6 @@
 # Drupal 7 Gulp Starter Theme
 
-Version: 1.0
+Version: 1.1
 
 ## Contributors:
 
@@ -64,7 +64,7 @@ gulp.task('browser-sync', function(){
 
 ### Deployment
 
-TODO
+Run `gulp` and upload.
 
 ### Features
 
@@ -95,6 +95,9 @@ TODO
 * [File Resumable Upload](https://www.drupal.org/project/file_resup)
 
 ### Changelog
+#### Version 1.1
+
+* Added drush integration and uglify / minify css deployment task.
 
 #### Version 1.0
 
